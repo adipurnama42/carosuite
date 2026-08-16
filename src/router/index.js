@@ -1,8 +1,8 @@
 import { createRouter, createWebHistory } from "vue-router";
 
 import DashboardLayout from "@/layouts/DashboardLayout.vue";
-import Dashboard from "@/pages/Dashboard/Index.vue";
-import Product from "@/pages/Produk/Index.vue";
+import Dashboard from "@/pages/dashboard/Index.vue";
+import Product from "@/pages/produk/Index.vue";
 
 const router = createRouter({
   history: createWebHistory(),
