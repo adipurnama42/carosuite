@@ -1,8 +1,31 @@
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHistory } from "vue-router";
+
+import DashboardLayout from "@/layouts/DashboardLayout.vue";
+import Dashboard from "@/pages/Dashboard/Index.vue";
+import Product from "@/pages/Produk/Index.vue";
 
 const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
-  routes: [],
-})
+  history: createWebHistory(),
 
-export default router
+  routes: [
+    {
+      path: "/",
+      component: DashboardLayout,
+
+      children: [
+        {
+          path: "",
+          name: "dashboard",
+          component: Dashboard,
+        },
+        {
+          path: "produk",
+          name: "produk",
+          component: Product,
+        },
+      ],
+    },
+  ],
+});
+
+export default router;
